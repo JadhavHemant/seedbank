@@ -4,11 +4,9 @@ import StudentReg from './Student/Studentreg';
 import Header from './componunts/Header';
 import Home from './componunts/Home';
 import Register from './componunts/Register';
-// import Admin from './componunts/AdminSeedAdmin';
 
 import Homebio from './BioCompo/Homebio';
 import Registerbio from './BioCompo/Registerbio';
-// import Adminbio from './BioCompo/Adminbio';
 
 import Planthome from './PlantCo/PlantHome';
 import Plantreg from './PlantCo/PlantRegi';

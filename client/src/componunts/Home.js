@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import moment from "moment"
-
+import Seed from './img/seeds.jpg'
 
 const Home = () => {
 
@@ -55,10 +55,22 @@ const Home = () => {
             }
             <div class="small-container">
                 <h2 class="title">SeedBank</h2>
-
+                <br />
+                <h5 >Draw A Biodiversity Map For Your Area On
+                    A Plain Paper Click A photograph Of It And upload Over Here
+                    you May Use Differnt Signs,Colours And Index.
+                    <center>
+                        <br /> You May Refer Image While Preparing your map</center>
+                </h5>
+                <br />
+                <center>
+                    <img src={Seed} height='250px' style={{ height: "500px", width: "500px", borderRadius: "20px" }} />
+                    <br />
+                    <br />
                 <div class="col-2">
                     <a href="/register" class="btn">Add Seed &#8594;</a>
                 </div>
+                </center>
 
                 <div className=' align-iteams-center mt-5'>
                     {

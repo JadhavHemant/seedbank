@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 // import moment from "moment"
 import Alert from 'react-bootstrap/Alert';
-
+import Bird from './img/bird.jpg'
 const Homebird = () => {
 
     const [data, setData] = useState([]);
@@ -55,10 +55,22 @@ const Homebird = () => {
             }
             <div class="small-container">
                 <h2 class="title">Bird / Animal</h2>
+                <br />
+                <h5 >Draw A Biodiversity Map For Your Area On
+                    A Plain Paper Click A photograph Of It And upload Over Here
+                    you May Use Differnt Signs,Colours And Index.
+                    <center>
+                        <br /> You May Refer Image While Preparing your map</center>
+                </h5>
+                <br />
+                <center>
+                <img src={Bird} height='250px' style={{ height: "500px", width: "400px", borderRadius: "20px" }} />
+                    <br />
+                    <br />
                 <div class="col-2">
                     <a href="/regibird" class="btn">Add Bird &#8594;</a>
                 </div>
-
+                </center>
                 {
                     data.length > 0 ? data.map((el, i) => {
                         return (
