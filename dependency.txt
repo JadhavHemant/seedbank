@@ -1,0 +1,132 @@
+server
+
+npm init -y 
+npm i express dotenv cors mysql2
+npm i -g nodemon
+npm i muliter moment
+
+
+
+
+client
+npm i react-router-dom
+npm install react-bootstrap bootstrap
+npm i axios
+npm i moment
+
+
+Table: biodiversity
+Columns:
+bio_id int AI PK 
+mapname varchar(45) 
+mapimg varchar(45) 
+date datetime 
+area varchar(80) 
+contact varchar(45)
+
+
+
+Table: birdanimale
+Columns:
+bird_id int AI PK 
+birdanimalename varchar(45) 
+owne varchar(45) 
+address varchar(45) 
+cordinates varchar(45) 
+birdanimaleimg varchar(45) 
+date datetime
+
+CREATE TABLE `userimgupload`.`birdanimale` (
+  `bird_id` INT NOT NULL AUTO_INCREMENT,
+  `birdanimalename` VARCHAR(45) NULL,
+  `birdanimalecol` VARCHAR(45) NULL,
+  `owne` VARCHAR(45) NULL,
+  `birdanimalecol1` VARCHAR(45) NULL,
+  `address` VARCHAR(45) NULL,
+  `cordinates` VARCHAR(45) NULL,
+  `birdanimaleimg` VARCHAR(45) NULL,
+  `date` DATETIME NULL,
+  PRIMARY KEY (`bird_id`));
+
+
+
+
+
+
+
+
+
+Table: personal
+Columns:
+s_id int AI PK 
+name varchar(45) 
+addresss varchar(45) 
+location varchar(45) 
+contact varchar(45) 
+school varchar(45) 
+image varchar(45) 
+date datetime
+
+CREATE TABLE `userimgupload`.`personal` (
+  `s_id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL,
+  `addresss` VARCHAR(145) NULL,
+  `location` VARCHAR(45) NULL,
+  `contact` VARCHAR(45) NULL,
+  `school` VARCHAR(45) NULL,
+  `image` VARCHAR(45) NULL,
+  `date` DATETIME NULL,
+  `personalcol` VARCHAR(45) NULL,
+  PRIMARY KEY (`s_id`));
+
+
+
+
+
+Table: plantdata
+Columns:
+plant_id int AI PK 
+plantname varchar(45) 
+plantimg varchar(45) 
+plantloc varchar(100) 
+date datetime
+
+CREATE TABLE `userimgupload`.`plantdata` (
+  `plant_id` INT NOT NULL AUTO_INCREMENT,
+  `plantname` VARCHAR(45) NULL,
+  `plantimg` VARCHAR(45) NULL,
+  `plantloc` VARCHAR(45) NULL,
+  `date` DATETIME NULL,
+  PRIMARY KEY (`plant_id`));
+
+
+
+
+
+Table: usersdata
+Columns:
+seed_id int AI PK 
+seedname varchar(45) 
+seedimg varchar(45) 
+date datetim
+
+
+CREATE TABLE `userimgupload`.`usersdata` (
+  `seed_id` INT NOT NULL AUTO_INCREMENT,
+  `seedname` VARCHAR(45) NULL,
+  `seedimg` VARCHAR(45) NULL,
+  `date` VARCHAR(45) NULL,
+  PRIMARY KEY (`seed_id`));
+
+
+
+
+// SELECT * FROM personal
+// inner join biodiversity
+// on personal.s_id= biodiversity.bio_id
+// inner join plantdata
+// on personal.s_id = plantdata.plant_id
+// inner join usersdata
+// on personal.s_id = usersdata.seed_id
+// inner join birdanimale
+// on personal.s_id = birdanimale.bird_id
